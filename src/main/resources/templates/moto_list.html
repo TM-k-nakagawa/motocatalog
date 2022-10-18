@@ -36,18 +36,16 @@
                 <div class="mb-3">
                     <label for="brand" class="form-label">バイクメーカー</label>
                     <select class="form-select" id="brand" aria-label="Default select example">
-
-                        <option th:each="brand : ${brands}" th:text="${brand.brandName}" th:value="${brand.brandId}"></option>
+                        <option th:each="brand : ${brands}" th:text="${brand.brandName}" th:value="${brand.brandId}">
+                        </option>
                     </select>
                 </div>
-                </nav>
             </div>
             <div class="col">
                 <div class="mb-3">
                     <label for="keyword" class="form-label">キーワード</label>
                     <input type="text" class="form-control" id="keyword" placeholder="">
                 </div>
-                </nav>
             </div>
         </div>
         <div class="row">
@@ -71,13 +69,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:eath="moto : ${motos}">
-                            <th scope="row" th:text="${moto.motoNo}"></th>
-                            <td th:text="${moto.brand.brandName}"></td>
-                            <td th:text="${moto.motoName}"></td>
-                            <td>水冷4気筒</td>
-                            <td>1500000</td>
-                            <td>かっこいい</td>
+                        <tr th:each="moto : ${motos}" th:object="${moto}">
+                            <th scope="row" th:text="*{motoNo}"></th>
+                            <td th:text="*{brand.brandName}"></td>
+                            <td th:text="*{motoName}"></td>
+                            <td th:text="*{cooling} + *{cylinder}"></td>
+                            <td th:text="*{price}"></td>
+                            <td th:text="*{comment}"></td>
                         </tr>
                     </tbody>
                 </table>

@@ -17,4 +17,5 @@ public class Brand {
     private String brandId;
     // ブランド名
     private String brandName;
+    
 }

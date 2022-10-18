@@ -22,19 +22,23 @@ public class MotosController {
     }
     
     @GetMapping("/motos")
-    public String Motos(Model model) {
+    public String motos(Model model) {
         //ブランド
         List<Brand> brands = new ArrayList<>();
         brands.add(new Brand("01" ,"HONDA"));
         brands.add(new Brand("02" ,"KAWASAKI"));
-
+        brands.add(new Brand("03" ,"YAMAHA"));
+        brands.add(new Brand("04" ,"SUZUKI"));
+        
         //バイク
         List<Motocycle> motos = new ArrayList<>();
-        motos.add(new Motocycle(1,"GB350",800,1,"空冷",500000,"いい音",new Brand("01" ,"HONDA"),1,null,null));
-        motos.add(new Motocycle(2,"Ninja",800,2,"水冷",500000,"すいすい",new Brand("02" ,"KAWASAKI"),1,null,null));
+        motos.add(new Motocycle(1, "GB350", 800, 1 ,"空冷", 500000 ,"いい音", new Brand("01" ,"HONDA"), 1, null, null));
+        motos.add(new Motocycle(2, "Ninja", 800, 2, "水冷", 1000000 ,"すいすい", new Brand("02" ,"KAWASAKI"), 1, null, null));
+        motos.add(new Motocycle(1, "Z900RS CAFE", 820, 4 ,"水冷", 1380000 ,"音めっちゃかっこいい", new Brand("02" ,"KAWASAKI"), 1, null, null));
+        
 
-        model.addAttribute("brands",brands);
-        model.addAttribute("motoss",motos);
+        model.addAttribute("brands", brands);
+        model.addAttribute("motos", motos);
 
         return "moto_list";
     }

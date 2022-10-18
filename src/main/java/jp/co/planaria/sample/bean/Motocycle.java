@@ -1,10 +1,9 @@
 package jp.co.planaria.sample.bean;
 
-import java.time.LocalDateTime;
-
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import java.time.LocalDateTime;
 
 /**
  * バイク
@@ -37,6 +36,5 @@ public class Motocycle {
     private LocalDateTime insDt;
     // 更新日時
     private LocalDateTime updDt;
-
 
 }
