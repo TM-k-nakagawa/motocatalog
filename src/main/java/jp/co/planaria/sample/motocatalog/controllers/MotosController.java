@@ -9,12 +9,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+
 import jp.co.planaria.sample.bean.Brand;
 import jp.co.planaria.sample.bean.Motocycle;
+import lombok.extern.slf4j.Slf4j;
 
 @Controller
+@Slf4j
 public class MotosController {
-    
+
+    // ログ部品を使えるようになる
+    // private Logger log = LoggerFactory.getLogger(MotosController.class);
+
     @RequestMapping("/hello")
     public String hello(@RequestParam String name, Model model) {
         model.addAttribute("name", name);
@@ -39,6 +45,8 @@ public class MotosController {
 
         model.addAttribute("brands", brands);
         model.addAttribute("motos", motos);
+
+        log.debug("motos:{}", motos);//ログ出力する
 
         return "moto_list";
     }
