@@ -1,4 +1,4 @@
-package jp.co.planaria.sample.bean;
+package jp.co.planaria.sample.motocatalog.beans;
 
 import lombok.Data;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Motocycle {
+public class Motorcycle {
 
     // バイク番号
     private Integer motoNo;
