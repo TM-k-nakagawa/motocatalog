@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 import jp.co.planaria.sample.bean.Brand;
-import jp.co.planaria.sample.bean.Motoscycle;
+import jp.co.planaria.sample.bean.Motorcycle;
 import lombok.extern.slf4j.Slf4j;
 
 @Controller
@@ -37,10 +37,10 @@ public class MotosController {
         brands.add(new Brand("04" ,"SUZUKI"));
         
         //バイク
-        List<Motoscycle> motos = new ArrayList<>();
-        motos.add(new Motoscycle(1, "GB350", 800, 1 ,"空冷", 500000 ,"いい音", new Brand("01" ,"HONDA"), 1, null, null));
-        motos.add(new Motoscycle(2, "Ninja", 800, 2, "水冷", 1000000 ,"すいすい", new Brand("02" ,"KAWASAKI"), 1, null, null));
-        motos.add(new Motoscycle(1, "Z900RS CAFE", 820, 4 ,"水冷", 1380000 ,"音めっちゃかっこいい", new Brand("02" ,"KAWASAKI"), 1, null, null));
+        List<Motorcycle> motos = new ArrayList<>();
+        motos.add(new Motorcycle(1, "GB350", 800, 1 ,"空冷", 500000 ,"いい音", new Brand("01" ,"HONDA"), 1, null, null));
+        motos.add(new Motorcycle(2, "Ninja", 800, 2, "水冷", 1000000 ,"すいすい", new Brand("02" ,"KAWASAKI"), 1, null, null));
+        motos.add(new Motorcycle(1, "Z900RS CAFE", 820, 4 ,"水冷", 1380000 ,"音めっちゃかっこいい", new Brand("02" ,"KAWASAKI"), 1, null, null));
         
 
         model.addAttribute("brands", brands);
