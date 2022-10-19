@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class Brand {
 
     // ブランドID
-    private String brandId;
+    private String brandsId;
     // ブランド名
     private String brandName;
     
