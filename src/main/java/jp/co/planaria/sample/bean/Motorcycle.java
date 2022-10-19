@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Motoscycle {
+public class Motorcycle {
 
     // バイク番号
     private Integer motoNo;
