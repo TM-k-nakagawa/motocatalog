@@ -16,4 +16,4 @@ public interface MotorcycleMapper {
         public List<Motorcycle> selectAll();
         
     }
-    
+abstract 
