@@ -20,4 +20,3 @@ CREATE TABLE m_brand (
     brand_id VARCHAR(2) NOT NULL PRIMARY KEY COMMENT 'ブランドID',
     brand_name VARCHAR(20) COMMENT 'ブランド名'
 ) COMMENT 'ブランドマスタ';
-a
